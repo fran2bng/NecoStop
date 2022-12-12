@@ -1,34 +1,22 @@
 
 * {
-    background-color: grey;
+    background-color: rgb(124, 109, 109);
 }
 
 .app {
 min-height: 100vh;
 display: flex;
 flex: wrap;
-align-items: center;
+align-items: left;
 text-align: center;
+
+
 }
 
 html,
 body {
     font-size: 18px;
-
-}
-
-.boximage {
-    max-width: 150px;
-}
-
-.box {
-    width: 1170px;
-    height: 368;
-    margin: 10px 10px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: antiquewhite;
-    box-shadow: 0 1px;
+    background-image: url("./jpg/map1.png"); 
+    width: 0px;
     
 }

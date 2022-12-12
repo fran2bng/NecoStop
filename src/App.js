@@ -1,4 +1,4 @@
-import './App.css';
+import './Components/Boxes.css';
 import Box from "./Components/box1";
 import "./App.css"
 import Navbar from "./Components/nav"

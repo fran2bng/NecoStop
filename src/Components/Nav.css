@@ -1,9 +1,11 @@
 .top {
-    max-width: 940;
-    font-size: 2.5em;
+    max-width: 500px;
+    font-size: 1.7em;
     font-family: 'Open Sans', sans-ser;
     line-height: 1.1;
     margin: 8px;
     position: absolute; top: 0; left: 0;
+  
+
 
 }
