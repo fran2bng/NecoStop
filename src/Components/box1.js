@@ -1,17 +1,17 @@
 import React from "react";
 
- function Box() {
+ function Box(props) {
     return (
         <div className="box">
-            <img src={require("./box1-IMG/box1image.jpg")}
+            <img src={require(`./box1-IMG/${props.imagen}.jpg`)}
                 className="boximage"
                 alt="iconomaps" />
             <div className="testbox">
-                <p className="dato1">Buenos dias!</p>
-                <p className="dato2">Cuando llega el colectivo?</p>
+                <p className="dato1">{props.saludo}!</p>
+                <p className="dato2">{props.pregunta}</p>
             </div>
         </div>
     );
 }
 
-export default Box;
+export default Box; 
