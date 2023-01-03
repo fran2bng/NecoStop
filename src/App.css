@@ -6,15 +6,43 @@ body {
 }
 
 .formulario {
-    color: aliceblue;
-    text-align: center;
+    color: black;
+    width: 70px;
+    height: 300px;
+    border: 1px solid #c3c3c3;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;;
     justify-content: center;
     height: 50vh;
+    text-align: -webkit-center;
+    position: fixed;
+    padding: 13px 24px;
+
+  background-color: #FFFFFF;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor:default;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 163px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
 }
 
 .form {
-    width: 30%;
+    width: 100%;
 }
