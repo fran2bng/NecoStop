@@ -1,8 +1,10 @@
 import './Components/Boxes.css';
 import Box from "./Components/box1";
-import "./App.css"
-import Navbar from "./Components/nav"
-import Boton from "./Components/Counter.js"
+import "./App.css";
+import Navbar from "./Components/nav";
+import Boton from "./Components/Buttons.js";
+import { Formik } from 'formik';
+import { Container, Form, Button } from "semantic-ui-react"  
 
 function App() {
 
@@ -15,25 +17,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1 className='texto1'>Bienvenido a NecosStop!</h1>
-      <Box
-        saludo="buenos dias!"
-        pregunta="Como estas?"
-        imagen="box1image"
-      />
-      <Boton
-        nombre="hola"
-        anyButon={true}
-        evento={hacerClick}
-      />
-      <Boton
-      nombre="ole"
-      anyButon={false}
-      evento={conterReboot}
-      />
 
-      <Navbar />
+    <div className="App">
+
+      <Container className='formulario'>
+      <h1>formulario</h1>
+      <Form className='form'>
+         <Form.Input type="text"></Form.Input>
+      </Form>
+      </Container>
     </div>
 
 

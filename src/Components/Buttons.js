@@ -1,4 +1,5 @@
 import { Button } from "bootstrap";
+import "./Buttons.css" 
 
 function Boton({ nombre, anyButon, evento }) {
     return (

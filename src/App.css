@@ -1,26 +1,20 @@
 
-* {
-    background-color: rgb(124, 109, 109);
-}
-
-.app {
-min-height: 100vh;
-display: flex;
-flex: wrap;
-align-items: left;
-text-align: center;
-
-
-}
-
 html,
 body {
     font-size: 18px;
-    background-image: url("./jpg/map1.png"); 
-    width: 0px;
-    
+    background-image: url("./jpg/map1.png");    
 }
 
-.texto1 {
+.formulario {
     color: aliceblue;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+}
+
+.form {
+    width: 30%;
 }
