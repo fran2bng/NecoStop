@@ -1,17 +1,24 @@
-import './Components/Boxes.css';
-import Box from "./Components/box1";
 import "./App.css";
-import Navbar from "./Components/nav";
-import Boton from "./Components/Buttons.js";
-import { useFormik } from 'formik';
-import { Container, Form, Button } from "semantic-ui-react";
-import * as yup from "yup";
-import Form1 from './Components/Form';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./Pages/home/Home";
+import Formulario from "./Pages/Formulario/Formulario";
+import Login from "./Pages/Login/Login";
+
+
 
 function App() {
   return (
     <div className="App">
-      <Form1/>
+     <BrowserRouter>
+     <Routes>
+
+      <Route path='/'element= { <Formulario/> } />
+      <Route path='/home' element={ <Home /> } />
+      <Route path='/Login' element={ <Login /> } />
+
+     </Routes>
+     </BrowserRouter>
+
     </div>
   );
 }
