@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import { TextField, Grid, Button } from '@mui/material'
 import "./Formulario.css"
 import { useFormik, validateYupSchema, yupToFormErrors, } from 'formik'
@@ -7,21 +8,25 @@ import * as Yup from "yup"
 import { ErrorResponse } from '@remix-run/router'
 import axios from 'axios'
 
-const url = "https://api.restful-api.dev/objects";
-
-
+export const AxiosInstance = axios.create({
+    baseURL: `$'http://localhost:5000/user',
+}`,
+  });
 
 
 const Formulario = () => {
 
-const sendForm = (data) =>{
-    console.log(data)
+    
+const sendForm = async (values) => {
+    const response = await axios({
+
+        method: 'post',
+        url: 'http://localhost:5000/user',
+        data: {values}
+    })
+    alert(JSON.stringify(values, null, 2));
 }
-
-
-
-
-const {handleChange, formik, handleSubmit, values, errors } = useFormik ({
+const {handleChange, formik, handleSubmit, values, errors, submitForm} = useFormik ({
     initialValues:{
         Usuario: "",
         Email: "",
@@ -62,7 +67,7 @@ const {handleChange, formik, handleSubmit, values, errors } = useFormik ({
                             name='Usuario'
                             onChange={handleChange}
                             value={values.Usuario}
-                            error={errors.Usuario}
+                            error={!!errors.Usuario}
                             helperText={errors.Usuario}
                             />
                     </Grid>
@@ -75,7 +80,7 @@ const {handleChange, formik, handleSubmit, values, errors } = useFormik ({
                             name='Email' 
                             onChange={handleChange}
                             value={values.Email}
-                            error={errors.Email}
+                            error={!!errors.Email}
                             helperText={errors.Email}
                             />
                     </Grid>
@@ -88,11 +93,13 @@ const {handleChange, formik, handleSubmit, values, errors } = useFormik ({
                             name='Password' 
                             onChange={handleChange}
                             value={values.Password}
-                            error={errors.Password}
+                            error={!!errors.Password}
                             helperText={errors.Password}/>
                     </Grid>
                 </Grid>
-                <Button type='submit' variant='contained'>Send</Button>
+                <Button 
+                type='submit' 
+                >Send</Button>
             </form>
 
         </div>
