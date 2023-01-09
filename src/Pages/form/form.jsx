@@ -102,7 +102,7 @@ const Form = () => {
                 <Button
                     type='submit'
                 >Send</Button>
-                <Link to="/Characters" className='link'>Well.. Maybe the "formulary" shit not fully implemented, this is the map thing </Link>
+                <Link to="/Characters" className='link'>Well.. Maybe the "formulary" shit is not fully implemented, this is the map thing </Link>
 
             </form>
 
