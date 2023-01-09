@@ -1,8 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from "./Pages/home/Home";
-import Formulario from "./Pages/Formulario/Formulario";
-import Login from "./Pages/Login/Login";
+import Form from "./Pages/form/form";
+import Login from "./Pages/characters/Characters";
+import Characters from "./Pages/characters/Characters";
 
 
 
@@ -12,9 +13,9 @@ function App() {
      <BrowserRouter>
      <Routes>
 
-      <Route path='/'element= { <Formulario/> } />
+      <Route path='/'element= { <Form/> } />
       <Route path='/home' element={ <Home /> } />
-      <Route path='/Login' element={ <Login /> } />
+      <Route path='/Characters' element={ <Characters /> } />
 
      </Routes>
      </BrowserRouter>
